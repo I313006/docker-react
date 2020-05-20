@@ -1,8 +1,8 @@
 # This Docker file is to be used for Production environment
 
-FROM node:alpine as builder
+FROM node:alpine
 WORKDIR '/app'
-COPY  package.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
